@@ -30,7 +30,7 @@ func main() {
 	 v1.POST("/encrypt", CBCEncryptHandler)
 
   }
-  router.Run(":3000")
+  router.Run()
 }
 
 func CBCDecryptHandler(context *gin.Context) {
