@@ -5,6 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	"github.com/gin-contrib/cors"
+
 )
 
 type EncryptRequest struct {
@@ -20,6 +22,7 @@ type DecryptRequest struct {
 func main() {
 
 	router := gin.Default()
+	router.Use(cors.Default())
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 
